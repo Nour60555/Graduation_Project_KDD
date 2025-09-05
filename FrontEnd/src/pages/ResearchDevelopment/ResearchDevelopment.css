@@ -1,0 +1,86 @@
+.research-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.research-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #053a58;
+}
+
+.research-header h1 {
+  font-size: 2.5rem;
+  color: #070823;
+  margin-bottom: 10px;
+}
+
+.research-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.research-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-left: 5px solid #053a58;
+  border-radius: 6px;
+}
+
+.research-section h2 {
+  font-size: 1.5rem;
+  color: #09173c;
+  margin-bottom: 10px;
+}
+
+.research-section p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .research-container {
+    padding: 15px;
+  }
+  .research-header h1 {
+    font-size: 2.2rem;
+  }
+  .research-header p {
+    font-size: 1rem;
+  }
+  .research-section {
+    padding: 15px;
+  }
+  .research-section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .research-header h1 {
+    font-size: 1.8rem;
+  }
+  .research-header p {
+    font-size: 0.95rem;
+  }
+  .research-section {
+    padding: 12px;
+    margin-top: 20px;
+  }
+  .research-section h2 {
+    font-size: 1.1rem;
+  }
+  .research-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}

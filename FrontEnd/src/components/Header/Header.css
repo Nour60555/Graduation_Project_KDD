@@ -1,0 +1,104 @@
+/* Header layout */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f4ba0;
+  padding: 10px 30px;
+  color: white;
+  height: 100px; /* consistent header height */
+  box-sizing: border-box;
+}
+
+/* Logo and title */
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 80px;
+  margin-right: 15px;
+}
+
+/* Anchor that wraps logo and title */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white !important;  /* ✅ Force white text for link elements */
+}
+
+/* Title inside logo link */
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white !important;  /* ✅ Force white color for title */
+  line-height: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Navigation links */
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background: #0f4ba0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+  }
+}
+
+/* Mobile - smaller than 500px */
+@media (max-width: 500px) {
+  .logo {
+    height: 60px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+}

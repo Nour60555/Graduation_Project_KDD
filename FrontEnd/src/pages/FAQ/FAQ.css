@@ -1,0 +1,101 @@
+.faq-container {
+  width: 100%;
+  max-width: 1200px; /* still limits for large screens */
+  margin: 40px auto;
+  padding: 0 5vw 60px; /* uses % of viewport width */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  user-select: none;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: clamp(1.2rem, 2vw, 2.0rem); /* scales */
+  font-weight: 500;
+  color: #145374;
+  margin-bottom: 40px;
+  letter-spacing: 0.03em;
+}
+
+.faq-section {
+  margin-bottom: 40px;
+  border-left: 4px solid #2a4d69;
+  padding-left: 2vw; /* adjusts with screen */
+}
+
+.faq-category {
+  font-size: clamp(1.0rem, 1vw, 1.3rem);
+  color: #2a4d69;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(42, 77, 105, 0.1);
+  margin-bottom: 15px;
+  padding: clamp(14px, 3vw, 18px) clamp(16px, 4vw, 24px);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  outline: none;
+}
+
+.faq-item:hover,
+.faq-item:focus {
+  box-shadow: 0 4px 16px rgba(42, 77, 105, 0.2);
+  background-color: #f8fbfd;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #145374;
+}
+
+.faq-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a4d69;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  width: clamp(26px, 6vw, 30px);
+  height: clamp(26px, 6vw, 30px);
+  border-radius: 50%;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+  background-color: #4a729b;
+}
+
+.faq-answer {
+  margin-top: 12px;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  line-height: 1.5;
+  color: #555;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px; /* large enough for any content */
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .faq-section {
+    padding-left: 4vw;
+  }
+}

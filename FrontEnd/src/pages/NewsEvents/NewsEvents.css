@@ -1,0 +1,113 @@
+.NewsEvents-container {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+  color: #000000;
+  background-color: #f9fafc;
+}
+
+/* Headings */
+.NewsEvents-container h1,
+.NewsEvents-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2a4d69;
+  font-weight: 600;
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 50px;
+}
+
+/* News & Event Cards shared styles */
+.news-card,
+.event-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 180px;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.news-card::before,
+.event-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 12px;
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+.news-card:hover::before,
+.event-card:hover::before {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Text content above overlay */
+.news-card > *,
+.event-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card Titles */
+.news-card h3,
+.event-card h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Dates */
+.news-card small,
+.event-card small {
+  display: block;
+  margin-bottom: 10px;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+/* Paragraph text */
+.news-card p,
+.event-card p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #eee;
+}
+
+/* Buttons (links) */
+a {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #0f4ba0;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+a:hover {
+  background: #063a75;
+}
+
+/* Events special border */
+.events-section .event-card {
+  border-left: 5px solid #1e233b;
+}

@@ -1,0 +1,56 @@
+.footer {
+  background: #0f4ba0; /* Same as header */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Keep links in one line on large screens */
+  white-space: nowrap;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Tablet & Mobile adjustments */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-wrap: wrap; /* Allow wrapping if space is too small */
+    gap: 10px;
+  }
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 500px) {
+  .footer {
+    padding: 15px 5px;
+  }
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+/* .footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+} */
